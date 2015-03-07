@@ -1,1 +1,1 @@
-/Volumes/Storage/Dean/.vim/vimrc
+vimrc
