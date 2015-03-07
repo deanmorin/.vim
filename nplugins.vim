@@ -18,6 +18,12 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-speeddating'
 
+NeoBundle 'bkad/camelcasemotion'
+NeoBundle 'fholgado/minibufexpl.vim'
+NeoBundle 'sirver/ultisnips'
+NeoBundle 'valloric/youcompleteme'
+NeoBundle 'wincent/command-t'
+
 call neobundle#end()
 
 NeoBundleCheck  "Prompt if uninstalled bundles are found
