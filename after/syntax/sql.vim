@@ -1,2 +1,2 @@
 syn keyword sqlStatement  vacuum
-syn keyword sqlType	      timestamp
+syn keyword sqlType       timestamp
