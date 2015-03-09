@@ -50,16 +50,6 @@ nnoremap <Leader>source  :source $MYVIMRC<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Enable 256 colors where possible
-if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
-  set t_Co=256
-endif
-
-"Colorscheme is unusable unless terminal supports 256 colors
-if &t_Co == 256
-  colorscheme deanbat256
-endif
-
 if exists('+colorcolumn')
   set colorcolumn=80   "Show margin
 endif
@@ -70,6 +60,16 @@ set linebreak          "Don't wrap text mid-word
 set display=lastline   "Show as much of wrapped line as possible (instead of @)
 
 syntax on              "Language-specific syntax highlighting
+
+"Enable 256 colors where possible
+if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
+  set t_Co=256
+endif
+
+"Colorscheme is unusable unless terminal supports 256 colors
+if &t_Co == 256
+  colorscheme deanbat256  "Needs to be called after `syntax on`
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Behavior

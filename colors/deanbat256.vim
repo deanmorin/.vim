@@ -25,5 +25,9 @@ hi Todo         ctermbg=11 ctermfg=0
 hi SpellBad     cterm=underline ctermfg=160
 hi SpellCap     cterm=underline
 
+"For files that don't have filetype-specific syntax rules
 syntax match NotPrintableAscii "[^\x20-\x7F]"
-hi NotPrintableAscii     ctermbg=236
+"For files that do have filetype-specific syntax rules
+autocmd Syntax * syntax match NotPrintableAscii "[^\x20-\x7F]" containedin=ALL
+
+hi NotPrintableAscii  ctermbg=236
