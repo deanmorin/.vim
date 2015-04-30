@@ -71,30 +71,32 @@ let g:UltiSnipsJumpForwardTrigger = '<Leader>u<CR>'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Unite
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call unite#custom#profile('default', 'context', { 'direction': 'botright' })
+if exists(':Unite')
+  call unite#custom#profile('default', 'context', { 'direction': 'botright' })
 
-"Use '-' as Unite command
-noremap [Unite]  <NOP>
-map     -        [Unite]
+  "Use '-' as Unite command
+  noremap [Unite]  <NOP>
+  map     -        [Unite]
 
-"File search
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-	"call unite#custom#source('file,file/new,buffer,file_rec',
-	"\ 'matchers', 'matcher_fuzzy')
-call unite#filters#sorter_default#use(['sorter_rank'])
+  "File search
+  call unite#filters#matcher_default#use(['matcher_fuzzy'])
+    "call unite#custom#source('file,file/new,buffer,file_rec',
+    "\ 'matchers', 'matcher_fuzzy')
+  call unite#filters#sorter_default#use(['sorter_rank'])
 
-noremap <silent>[Unite]b  :Unite bookmark<CR>
-noremap <silent>[Unite]o  :UniteWithCurrentDir -start-insert file_rec/async:!<CR>
+  noremap <silent>[Unite]b  :Unite bookmark<CR>
+  noremap <silent>[Unite]o  :UniteWithCurrentDir -start-insert file_rec/async:!<CR>
 
-"Yank list
-let g:unite_source_history_yank_enable = 1
-noremap <silent>[Unite]p  :Unite history/yank<CR>
+  "Yank list
+  let g:unite_source_history_yank_enable = 1
+  noremap <silent>[Unite]p  :Unite history/yank<CR>
 
-"if executable('ag')
-  "let g:unite_source_grep_command = 'ag'
-  "let g:unite_source_group_default_opts = '-i --no-heading --no-color -k -H'
-  "let g:unite_source_grep_recursive_opt = ''
-"endif
+  "if executable('ag')
+    "let g:unite_source_grep_command = 'ag'
+    "let g:unite_source_group_default_opts = '-i --no-heading --no-color -k -H'
+    "let g:unite_source_grep_recursive_opt = ''
+  "endif
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => YouCompleteMe
