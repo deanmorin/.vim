@@ -1,4 +1,4 @@
-let vim_dir = fnameescape($HOME.'/.vim')
+let vim_dir = fnameescape($HOME.'/.nvim')
 
 "Plugins slow down vimdiff
 if !&diff && version >= 704

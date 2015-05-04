@@ -29,10 +29,10 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'vim-scripts/indentpython.vim'
 
-NeoBundle 'bkad/camelcasemotion'
+NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'fholgado/minibufexpl.vim'
 NeoBundle 'sirver/ultisnips'
-NeoBundle 'valloric/youcompleteme'
+"NeoBundle 'valloric/YouCompleteMe'
 NeoBundle 'wincent/command-t'
 
 call neobundle#end()
