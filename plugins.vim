@@ -32,7 +32,7 @@ NeoBundle 'vim-scripts/indentpython.vim'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'fholgado/minibufexpl.vim'
 NeoBundle 'sirver/ultisnips'
-"NeoBundle 'valloric/YouCompleteMe'
+NeoBundle 'valloric/YouCompleteMe'
 NeoBundle 'wincent/command-t'
 
 call neobundle#end()
