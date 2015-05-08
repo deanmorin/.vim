@@ -1,4 +1,5 @@
 let &runtimepath .= ','.vim_dir.'/bundle/neobundle.vim'
+let neobundle#install_process_timeout = 300
 
 call neobundle#begin(expand(vim_dir.'/bundle'))
 
