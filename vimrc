@@ -14,6 +14,7 @@ if !&diff && version >= 704
 end
 
 execute 'source '.vim_dir.'/settings.vim'
+execute 'source '.vim_dir.'/dbext.vim'
 
 if !&diff && version >= 704
   execute 'source '.vim_dir.'/plugin_settings.vim'
