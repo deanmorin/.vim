@@ -43,7 +43,9 @@ nnoremap <CR> o<Esc>
 nnoremap <Leader>subg  :%s;;g<Left><Left>
 nnoremap <Leader>subc  :%s;;gc<Left><Left><Left>
 "Q is right next to ':' in dvorak, and I never use ex mode anyway
-nnoremap Q  <NOP>
+nnoremap Q <NOP>
+"Cause I hit it by mistake all. the. time.
+nnoremap <F1> <NOP>
 "Source .vimrc
 nnoremap <Leader>source  :source $MYVIMRC<CR>
 
