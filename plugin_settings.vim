@@ -33,7 +33,7 @@ vnoremap <silent><CR>  :EasyAlign<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => MiniBufExpl
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:MiniBufExplShowBufNames = 0
+let g:miniBufExplCycleArround = 1
 let g:miniBufExplSplitBelow = 0
 let g:miniBufExplUseSingleClick = 1
 nnoremap H  :MBEbp<CR>
