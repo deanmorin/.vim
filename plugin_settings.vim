@@ -31,6 +31,12 @@ nnoremap <silent><F5>  :GundoToggle<CR>
 vnoremap <silent><CR>  :EasyAlign<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fireplace
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Pretty print last result
+nnoremap <Leader>cp :execute "Eval (do (require 'clojure.pprint) (clojure.pprint/pp))"<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => MiniBufExpl
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:miniBufExplCycleArround = 1
