@@ -20,14 +20,15 @@ filetype indent on  "Enable file-specific indentation rules
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Key Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","     "Change leader from \
+"Use 'map' instead 'let mapleader' so that it shows up in the showcmd area
+nmap <Space> <Leader>
 
 set pastetoggle=<F11>   "Disable autoindent, key mappings, etc. to paste text
 
 "Make |Y| behave like |C| and |D|
 nmap Y yY$
 "Close buffer
-nnoremap <Leader>h  :bd<CR>
+nnoremap <Leader>k  :bd<CR>
 "Remap H (screen top) and L (screen bottom) so they can be repurposed to move
 "between buffers
 nnoremap <Leader>H  H
