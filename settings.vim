@@ -61,6 +61,7 @@ set number             "Line numbers
 set ruler              "Line/column/position indicator
 set linebreak          "Don't wrap text mid-word
 set display=lastline   "Show as much of wrapped line as possible (instead of @)
+set showcmd            "Show typed commands in lower right
 
 syntax on              "Language-specific syntax highlighting
 
