@@ -49,6 +49,8 @@ nnoremap Q <NOP>
 nnoremap <F1> <NOP>
 "Source .vimrc
 nnoremap <Leader>source  :source $MYVIMRC<CR>
+"Open in markdown reader
+nnoremap <Leader>md  :!open %<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Appearance
