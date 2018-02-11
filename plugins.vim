@@ -1,44 +1,31 @@
-let &runtimepath .= ','.vim_dir.'/bundle/neobundle.vim'
-let neobundle#install_process_timeout = 300
+call plug#begin(expand(vim_dir.'/plugged'))
 
-call neobundle#begin(expand(vim_dir.'/bundle'))
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'ervandew/supertab'
+Plug 'junegunn/vim-easy-align', { 'tag': '*' }
+Plug 'majutsushi/tagbar', { 'tag': '*' }
+Plug 'scrooloose/nerdtree', { 'tag': '*' }
+" Plug 'SirVer/ultisnips'
+Plug 'sjl/gundo.vim', { 'tag': '*' }
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-speeddating'
+Plug 'vim-airline/vim-airline', { 'tag': '*'}
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-scripts/dbext.vim'
+Plug 'vim-scripts/indentpython.vim', { 'tag': '*', 'for': 'python' }
+Plug 'vim-syntastic/syntastic', { 'tag': '*'}
+Plug 'bkad/CamelCaseMotion'
+Plug 'weynhamz/vim-plugin-minibufexpl', { 'tag': '*'}
+Plug 'wincent/command-t', { 'tag': '*', 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' }
 
-NeoBundleFetch 'shougo/neobundle.vim'  "Let NeoBundle manage NeoBundle
+Plug 'roxma/nvim-completion-manager'
+if !has('nvim')
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'roxma/ncm-rct-complete'
 
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-
-NeoBundle 'bling/vim-airline'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-speeddating'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/dbext.vim'
-NeoBundle 'vim-scripts/indentpython.vim'
-NeoBundle 'bkad/CamelCaseMotion'
-NeoBundle 'fholgado/minibufexpl.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'wincent/command-t'
-
-call neobundle#end()
-
-NeoBundleCheck  "Prompt if uninstalled bundles are found
+call plug#end()
