@@ -1,4 +1,4 @@
-call plug#begin(expand(vim_dir.'/plugged'))
+call plug#begin(vim_dir.'/plugged')
 
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'ervandew/supertab'
