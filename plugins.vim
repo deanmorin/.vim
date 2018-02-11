@@ -22,10 +22,9 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'weynhamz/vim-plugin-minibufexpl', { 'tag': '*'}
 Plug 'wincent/command-t', { 'tag': '*', 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' }
 
-Plug 'roxma/nvim-completion-manager'
-if !has('nvim')
-  Plug 'roxma/vim-hug-neovim-rpc'
+if has('nvim')
+  Plug 'roxma/nvim-completion-manager'
+  Plug 'roxma/ncm-rct-complete'
 endif
-Plug 'roxma/ncm-rct-complete'
 
 call plug#end()
