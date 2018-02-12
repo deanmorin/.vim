@@ -1,11 +1,17 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set laststatus=2  "always show status line for the last window
-"set laststatus=0  "always show status line for the last window
+set laststatus=2  "Always show status line for the last window
 
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1 "Show errors from ale
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ALE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_echo_msg_format = '[%linter%] %s'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CamelCaseMotion
@@ -78,46 +84,3 @@ nnoremap <silent><F9>  :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger = '<Leader>u<CR>'
 let g:UltiSnipsJumpForwardTrigger = '<Leader>u<CR>'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Unite
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if exists(':Unite')
-  call unite#custom#profile('default', 'context', { 'direction': 'botright' })
-
-  "Use '-' as Unite command
-  noremap [Unite]  <NOP>
-  map     -        [Unite]
-
-  "File search
-  call unite#filters#matcher_default#use(['matcher_fuzzy'])
-    "call unite#custom#source('file,file/new,buffer,file_rec',
-    "\ 'matchers', 'matcher_fuzzy')
-  call unite#filters#sorter_default#use(['sorter_rank'])
-
-  noremap <silent>[Unite]b  :Unite bookmark<CR>
-  noremap <silent>[Unite]o  :UniteWithCurrentDir -start-insert file_rec/async:!<CR>
-
-  "Yank list
-  let g:unite_source_history_yank_enable = 1
-  noremap <silent>[Unite]p  :Unite history/yank<CR>
-
-  "if executable('ag')
-    "let g:unite_source_grep_command = 'ag'
-    "let g:unite_source_group_default_opts = '-i --no-heading --no-color -k -H'
-    "let g:unite_source_grep_recursive_opt = ''
-  "endif
-endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => YouCompleteMe
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Don't open doc window for omnicomplete by default
-set completeopt-=preview
-"Turn on/off omnicomple preview window
-noremap <Leader>docon  :set completeopt+=preview<CR>
-
-noremap <Leader>docoff :set completeopt-=preview<CR>
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'

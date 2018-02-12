@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/indentpython.vim', { 'tag': '*', 'for': 'python' }
 Plug 'vim-syntastic/syntastic', { 'tag': '*'}
 Plug 'bkad/CamelCaseMotion'
+Plug 'w0rp/ale'
 Plug 'weynhamz/vim-plugin-minibufexpl', { 'tag': '*'}
 Plug 'wincent/command-t', { 'tag': '*', 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' }
 
