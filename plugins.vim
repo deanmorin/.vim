@@ -5,6 +5,7 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align', { 'tag': '*' }
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'tag': '*' }
+Plug 'plytophogy/vim-virtualenv', { 'for': 'python' }
 Plug 'scrooloose/nerdtree', { 'tag': '*' }
 " Plug 'SirVer/ultisnips'
 Plug 'sjl/gundo.vim', { 'tag': '*' }
@@ -18,7 +19,6 @@ Plug 'vim-airline/vim-airline', { 'tag': '*'}
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'vim-scripts/dbext.vim'
 Plug 'vim-scripts/indentpython.vim', { 'tag': '*', 'for': 'python' }
-Plug 'vim-syntastic/syntastic', { 'tag': '*'}
 Plug 'bkad/CamelCaseMotion'
 Plug 'w0rp/ale'
 Plug 'weynhamz/vim-plugin-minibufexpl', { 'tag': '*'}
