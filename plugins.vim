@@ -3,6 +3,7 @@ call plug#begin(vim_dir.'/plugged')
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align', { 'tag': '*' }
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'tag': '*' }
 Plug 'scrooloose/nerdtree', { 'tag': '*' }
 " Plug 'SirVer/ultisnips'
