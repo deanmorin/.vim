@@ -25,7 +25,7 @@ Plug 'weynhamz/vim-plugin-minibufexpl', { 'tag': '*'}
 Plug 'wincent/command-t', { 'tag': '*', 'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' }
 
 if has('nvim')
-  Plug 'roxma/nvim-completion-manager'
+  Plug 'deanmorin/nvim-completion-manager'
   Plug 'roxma/ncm-rct-complete'
 endif
 
