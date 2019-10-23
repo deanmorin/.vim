@@ -27,6 +27,7 @@ let g:CommandTMaxHeight = 20
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Gundo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gundo_prefer_python3 = 1
 let g:gundo_preview_bottom = 1
 let g:gundo_width = 30
 nnoremap <silent><F5>  :GundoToggle<CR>
@@ -84,3 +85,5 @@ nnoremap <silent><F9>  :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger = '<Leader>u<CR>'
 let g:UltiSnipsJumpForwardTrigger = '<Leader>u<CR>'
+
+" let g:gutentags_trace = 1
